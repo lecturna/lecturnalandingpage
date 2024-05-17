@@ -41,68 +41,77 @@
 
 
   <div class="section_scrolling" id="sectionhome"></div>
-  <nav class="site-nav mb-5 " >
-    <div class="pb-2 top-bar mb-3">
-      <div class="container">
-        <div class="row align-items-center">
+    <nav class="site-nav mb-5 " >
+        <div class="pb-2 top-bar mb-3">
+            <div class="container">
+                <div class="row align-items-center">
 
-          <div class="col-6 col-lg-9">
-            <a href="#" class="small me-3"><span class="icon-question-circle-o me-2"></span> <span class="d-none d-lg-inline-block">Have a questions?</span></a> 
-            <a href="https://wa.me/6285952889899?text=Hi%20Lecturna" target="_blank" class="small me-3"><span class="icon-whatsapp me-2"></span> <span class="d-none d-lg-inline-block">0859-5288-9899</span></a> 
-            <a href="#" class="small me-3"><span class="icon-envelope me-2"></span> <span class="d-none d-lg-inline-block">hello@lecturna.id</span></a> 
-          </div>
-
-          <div class="col-6 col-lg-3 text-end">
-            <a href="javascript:void()" class="small me-3">
-              <span class="icon-lock"></span>
-              Log In
-            </a>
-            <a href="javascript:void()" class="small">
-              <span class="icon-person"></span>
-              Register
-            </a>
-          </div>
-
+                <div class="col-6 col-lg-9">
+                    <a href="#" class="small me-3"><span class="icon-question-circle-o me-2"></span> <span class="d-none d-lg-inline-block">Have a questions?</span></a> 
+                    <a href="https://wa.me/6285952889899?text=Hi%20Lecturna" target="_blank" class="small me-3"><span class="icon-whatsapp me-2"></span> <span class="d-none d-lg-inline-block">0859-5288-9899</span></a> 
+                    <a href="#" class="small me-3"><span class="icon-envelope me-2"></span> <span class="d-none d-lg-inline-block">hello@lecturna.id</span></a> 
+                </div>
+                @if (Route::has('login'))
+                <div class="col-6 col-lg-3 text-end">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="small me-3">
+                            <span class="icon-home"></span>
+                            Dashboard
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="small me-3">
+                            <span class="icon-lock"></span>
+                            Log In
+                        </a>
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="small">
+                            <span class="icon-person"></span>
+                            Register
+                        </a>
+                        @endif
+                    @endauth
+                </div>
+                @endif
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="sticky-nav js-sticky-header">
-      <div class="container position-relative" >
-        <div class="site-navigation text-center">
-          <a href="/" class="logo menu-absolute m-0">Lecturna<span class="text-warning">.</span></a>
-          <ul class="js-clone-nav d-none d-lg-inline-block site-menu" >
-            <li class="sectionhome active"><a href="#sectionhome">Home</a></li>
-            <li class="has-children sectionchooseus sectionaboutus">
-              <a href="#sectionchooseus">About Us</a>
-              <ul class="dropdown">
-                <li><a href="#sectionchooseus">Why Choose Us</a></li>
-                <li><a href="#sectionaboutus">About Us</a></li>
-                <!-- <li class="has-children">
-                  <a href="#">Menu Two</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Sub Menu One</a></li>
-                    <li><a href="#">Sub Menu Two</a></li>
-                    <li><a href="#">Sub Menu Three</a></li>
-                  </ul>
-                </li> -->
-              </ul>
-            </li>
-            <li class="sectioncourses"><a href="#sectioncourses">Courses</a></li>
-            <li class="sectionnewspromo"><a href="#sectionnewspromo">News & Promo</a></li>
-            <li class="sectiontestimonial"><a href="#sectiontestimonial">Testimonial</a></li>
-            <li class="sectioncontact"><a href="#sectioncontact">Contact</a></li>
-          </ul>
+        <div class="sticky-nav js-sticky-header">
+            <div class="container position-relative" >
+                <div class="site-navigation text-center">
+                    <a href="/" class="logo menu-absolute m-0">Lecturna<span class="text-warning">.</span></a>
+                    <ul class="js-clone-nav d-none d-lg-inline-block site-menu" >
+                        <li class="sectionhome active"><a href="#sectionhome">Home</a></li>
+                        <li class="has-children sectionchooseus sectionaboutus">
+                        <a href="#sectionchooseus">About Us</a>
+                        <ul class="dropdown">
+                            <li><a href="#sectionchooseus">Why Choose Us</a></li>
+                            <li><a href="#sectionaboutus">About Us</a></li>
+                            <!-- <li class="has-children">
+                            <a href="#">Menu Two</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub Menu One</a></li>
+                                <li><a href="#">Sub Menu Two</a></li>
+                                <li><a href="#">Sub Menu Three</a></li>
+                            </ul>
+                            </li> -->
+                        </ul>
+                        </li>
+                        <li class="sectioncourses"><a href="#sectioncourses">Courses</a></li>
+                        <li class="sectionnewspromo"><a href="#sectionnewspromo">News & Promo</a></li>
+                        <li class="sectiontestimonial"><a href="#sectiontestimonial">Testimonial</a></li>
+                        <li class="sectioncontact"><a href="#sectioncontact">Contact</a></li>
+                    </ul>
 
-          <a href="https://wa.me/6285952889899?text=Hi%20Lecturna" target="_blank" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
+                    <a href="https://wa.me/6285952889899?text=Hi%20Lecturna" target="_blank" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
 
-          <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
-            <span></span>
-          </a>
+                    <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
 
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
   <div class="untree_co-hero overlay" style="background-image: url('images/hero-img-1-min.png');">
 

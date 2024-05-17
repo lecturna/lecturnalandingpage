@@ -1,0 +1,127 @@
+@extends('layouts.app')
+@section('title', 'Dashboard')
+
+@section('content')
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Hi {{ Auth::user()->name }}, Welcome</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-8">
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Example Card</h5>
+                <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card text-bg-primary bg-gradient">
+                    <div class="card-body pt-4 d-flex flex-column align-items-center">
+                        <img src="images/testi_herry.png" class="rounded" alt="Profile">
+                        <h5 class="fw-bold mt-2 mb-1">Herry Supriyanto</h5>
+                        <h6 class="mb-3"><small>Member since 2024</small></h6>
+                        
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card text-bg-primary bg-gradient">
+                                        <div class="card-body">
+                                            <div class="d-flex mt-3">
+                                                <div class="p-0">
+                                                    <h3 class="card-title p-0">126</h3>
+                                                    <span style="font-size: 10px;" class="fw-bold d-block p-0">Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex mt-3">
+                                                <div class="p-0">
+                                                    <h3 class="card-title p-0">456</h3>
+                                                    <span style="font-size: 10px;" class="fw-bold d-block p-0">In Progress</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex mt-3">
+                                                <div class="p-0">
+                                                    <h3 class="card-title p-0">126</h3>
+                                                    <span style="font-size: 10px;" class="fw-bold d-block p-0">Certificate</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex mt-3">
+                                                <div class="p-0">
+                                                    <h3 class="card-title p-0">456</h3>
+                                                    <span style="font-size: 10px;" class="fw-bold d-block p-0">Failed</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-6">
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Example Card</h5>
+                <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Example Card</h5>
+                <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+    
+   
+  </main><!-- End #main -->
+@endsection
