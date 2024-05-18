@@ -38,12 +38,12 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => 'smtp.resend.com',
-            'host' => 'smtp.resend.com',
-            'port' => '465',
-            'encryption' => 'tls',
-            'username' => 'resend',
-            'password' => 're_PsLYGLsH_JA3SEcrffm9zE5RMWvMuibT2',
+            'url' => env('MAIL_URL'),
+            'host' => smtp.resend.com,
+            'port' => 465,
+            'encryption' => tls,
+            'username' => resend,
+            'password' => re_PsLYGLsH_JA3SEcrffm9zE5RMWvMuibT2,
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
@@ -123,5 +123,10 @@ return [
         'address' => 'noreply@lecturna.id',
         'name' => 'Lecturna',
     ],
+
+    // 'from' => [
+    //     'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+    //     'name' => env('MAIL_FROM_NAME', 'Example'),
+    // ],
 
 ];
