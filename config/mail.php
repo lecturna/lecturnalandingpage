@@ -38,12 +38,12 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
-            'host' => smtp.resend.com,
-            'port' => 465,
-            'encryption' => tls,
-            'username' => resend,
-            'password' => re_PsLYGLsH_JA3SEcrffm9zE5RMWvMuibT2,
+            'url' => 'smtp.resend.com',
+            'host' => 'smtp.resend.com',
+            'port' => '465',
+            'encryption' => 'tls',
+            'username' => 'resend',
+            'password' => 're_PsLYGLsH_JA3SEcrffm9zE5RMWvMuibT2',
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
