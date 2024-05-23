@@ -4,13 +4,14 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', function () {
     return view('home');
 });
+
+// Route::get('/verifycustom', function () {
+//     return view('auth.verify-custom');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');

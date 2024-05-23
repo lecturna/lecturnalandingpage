@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Auth\Notifications\VerifyEmail;
+use Illuminate\Notifications\Messages\MailMessage;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +26,13 @@ class AppServiceProvider extends ServiceProvider
         if($this->app->environment('production')){
             \URL::forceScheme('https');
         };
+
+        VerifyEmail::toMailUsing(function (object $notifiable, string $url) {
+            return (new MailMessage)
+                ->view('auth.verify-custom',[
+                    'user' => $notifiable,
+                    'url' => $url,
+                ]);
+        });
     }
 }
