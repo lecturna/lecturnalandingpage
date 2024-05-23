@@ -38,27 +38,15 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => 'smtp.resend.com',
-            'host' => 'smtp.resend.com',
-            'port' => '465',
-            'encryption' => 'tls',
-            'username' => 'resend',
-            'password' => 're_PsLYGLsH_JA3SEcrffm9zE5RMWvMuibT2',
+            'url' => env('MAIL_URL'),
+            'host' => env('MAIL_HOST', '127.0.0.1'),
+            'port' => env('MAIL_PORT', 2525),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
-
-        // 'smtp' => [
-        //     'transport' => 'smtp',
-        //     'url' => env('MAIL_URL'),
-        //     'host' => env('MAIL_HOST', '127.0.0.1'),
-        //     'port' => env('MAIL_PORT', 2525),
-        //     'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-        //     'username' => env('MAIL_USERNAME'),
-        //     'password' => env('MAIL_PASSWORD'),
-        //     'timeout' => null,
-        //     'local_domain' => env('MAIL_EHLO_DOMAIN'),
-        // ],
 
         'ses' => [
             'transport' => 'ses',
@@ -120,13 +108,12 @@ return [
     */
 
     'from' => [
-        'address' => 'noreply@lecturna.id',
-        'name' => 'Lecturna',
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    // 'from' => [
-    //     'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-    //     'name' => env('MAIL_FROM_NAME', 'Example'),
-    // ],
+    'resend' => [
+        'transport' => 'resend',
+    ],
 
 ];
